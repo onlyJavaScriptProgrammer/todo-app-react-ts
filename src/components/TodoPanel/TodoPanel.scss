@@ -1,0 +1,46 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__label {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    &:hover {
+      transition: all 0.5s;
+      border: 1px solid #cbcbcb;
+    }
+    &:focus {
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+    }
+  }
+  &__btn {
+    font-size: 20px;
+    font-weight: 400;
+    width: 350px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(0, 128, 128);
+    box-shadow: 0px 5px 10px rgba(0, 128, 128, 0.6);
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.5s;
+      box-shadow: 0px 5px 10px rgba(0, 128, 128, 0.8);
+    }
+  }
+}
