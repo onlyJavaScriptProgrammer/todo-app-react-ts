@@ -14,6 +14,13 @@ const TodoPanel: React.FC = () => {
     }
   };
 
+  const handleKeyDownValue = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && value.trim().length) {
+      dispatch(addTodo(value));
+      setValue('');
+    }
+  };
+
   const handleValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
@@ -29,6 +36,7 @@ const TodoPanel: React.FC = () => {
         name="field"
         value={value}
         onChange={handleValue}
+        onKeyDown={handleKeyDownValue}
         placeholder="Enter Todo"
       />
       <button className="panel__btn" onClick={handleClickValue}>
