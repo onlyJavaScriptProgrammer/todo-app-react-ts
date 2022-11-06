@@ -17,7 +17,13 @@ const TodoListItem: React.FC<ITodo> = ({ id, name, complete }) => {
           onChange={() => dispatch(toggleTodo(id))}
           checked={complete}
         />
-        <div className="item__content">{name}</div>
+        <div
+          className={
+            complete ? 'item__content item__content_completed' : 'item__content'
+          }
+        >
+          {name}
+        </div>
       </div>
       <button className="item__del" onClick={() => dispatch(removeTodo(id))}>
         Delete

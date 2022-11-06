@@ -12,6 +12,9 @@
     font-weight: 400;
     font-size: 20px;
     margin: 0 25px;
+    &_completed {
+      text-decoration: line-through;
+    }
   }
   &__input {
     width: 20px;
